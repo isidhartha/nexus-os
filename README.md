@@ -1,92 +1,119 @@
-# NexusOS — AI Operating System & Agent Workspace
+# NexusOS
 
-> **FLAGSHIP PROJECT** — A Jarvis-like AI operating environment for voice-controlled PC automation, autonomous workflows, and intelligent agent orchestration.
+I built NexusOS because I wanted a Jarvis — not a toy demo, but something that actually controls my computer, understands what I'm asking, and takes action. This is that project.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://python.org)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.111-green.svg)](https://fastapi.tiangolo.com)
+It's an AI operating environment that runs locally. You say "Hey Nexus", it wakes up, listens, figures out what you want, and does it. Open Chrome, search for something, move files around, run a script, control your smart home devices — all through voice or text, without touching the keyboard.
 
-## Features
+---
 
-- [x] Wake word detection ("Hey Nexus")
-- [x] Voice-controlled PC automation
-- [x] Browser control via Playwright
-- [x] App launching and file management
-- [x] Autonomous multi-step workflows
-- [x] Voice identity recognition
-- [x] Persistent AI memory system
-- [x] Multimodal interactions (voice + text + vision)
-- [x] Smart home / IoT integrations via MQTT
-- [x] Voice assistant dashboard (web UI)
-- [x] Plugin system for extensions
+## What it does
 
-## Architecture
+**Voice pipeline** — NexusOS listens for a wake word using your microphone. When it hears "Hey Nexus", it captures your command, transcribes it with OpenAI Whisper (which runs locally), and passes it to the AI brain. When it responds, it speaks back using text-to-speech. The whole loop takes about 2-3 seconds.
 
-```mermaid
-graph TD
-    A[Wake Word Engine] -->|Triggered| B[Voice Pipeline]
-    B --> C[STT - Whisper]
-    C --> D[NexusOS Controller]
-    D --> E[AI Brain - GPT-4/Claude]
-    E --> F{Agent Router}
-    F --> G[Computer Agent]
-    F --> H[Browser Agent]
-    F --> I[File Agent]
-    F --> J[Workflow Agent]
-    D --> K[TTS Engine]
-    K --> L[Speaker Output]
-    D --> M[Web Dashboard]
-    D --> N[Memory System]
-    D --> O[IoT / MQTT]
-```
+**Computer control** — It can move your mouse, click buttons, type text, and interact with any application on your desktop using PyAutoGUI. You tell it what you want to do in plain English, and it figures out the clicks.
 
-## Tech Stack
+**Browser automation** — Built on Playwright, so it can open browsers, navigate to pages, fill forms, click links, and read page content back to you. I use it to look things up without touching the keyboard.
 
-| Layer | Technology |
-|-------|-----------|
-| Backend | FastAPI, Python 3.11+ |
-| Voice STT | OpenAI Whisper |
-| Voice TTS | pyttsx3 |
-| Browser Automation | Playwright |
-| PC Automation | PyAutoGUI |
-| IoT | Paho MQTT |
-| Memory | SQLite + Vector Embeddings |
-| Frontend | React 18, Tailwind CSS, Vite |
-| Container | Docker, Docker Compose |
+**File management** — Create, move, rename, search, and delete files through voice commands. It operates within safe boundaries and won't touch system directories.
 
-## Quick Start
+**Autonomous workflows** — You can define multi-step routines — "morning routine", "end of day", whatever you want — and it runs through each step in sequence. Open Slack, check email, pull up your calendar, read you the headlines. Define it once, run it anytime.
+
+**AI memory** — This is the part I'm most proud of. NexusOS remembers things across sessions. Tell it something and it stores it with a vector embedding. Next time you ask something related, it retrieves the right memory. It actually knows context from previous conversations.
+
+**Smart home** — Connects to MQTT, which means it works with Home Assistant and most IoT devices. Turn lights on and off, read sensor data, trigger automations.
+
+**Plugin system** — Drop a Python file into the plugins folder and NexusOS loads it automatically. No configuration needed. Build your own integrations without touching the core.
+
+---
+
+## Tech stack
+
+The backend is Python — FastAPI serving a REST API and WebSocket connections, Whisper for speech recognition, pyttsx3 for text-to-speech, PyAutoGUI for computer control, Playwright for browser automation, SQLite with vector embeddings for memory, and Paho MQTT for IoT.
+
+The frontend is React with Tailwind CSS — a dashboard that shows real-time transcriptions, command history, your memory entries, and smart home controls.
+
+Everything runs in Docker, so you don't have to install audio libraries on your host machine unless you want to use the actual microphone.
+
+---
+
+## How to run it
+
+You'll need Docker and Docker Compose installed. That's the only real prerequisite.
+
+**1. Clone the repo**
 
 ```bash
-git clone https://github.com/yourusername/nexus-os
+git clone https://github.com/isidhartha/nexus-os.git
 cd nexus-os
+```
+
+**2. Set up your environment**
+
+```bash
 cp .env.example .env
-# Edit .env with your API keys
-docker-compose up --build
 ```
 
-Open `http://localhost:3000` for the dashboard.
+Open `.env` and add your OpenAI API key. Everything else can stay as the default values to start.
 
-## Configuration
-
-Set your wake word in `.env`:
 ```
+OPENAI_API_KEY=sk-your-key-here
 WAKE_WORD=nexus
 ```
 
-To use a custom wake word, you can optionally configure Porcupine (free tier available).
+**3. Start everything**
 
-## API Reference
+```bash
+docker-compose up --build
+```
 
-See [docs/API.md](docs/API.md).
+This builds the backend, starts Postgres, Redis, and the MQTT broker, and serves the frontend. First build takes a few minutes because it installs the Playwright browser.
 
-## Architecture Details
+**4. Open the dashboard**
 
-See [docs/architecture.md](docs/architecture.md).
+Go to `http://localhost:3000`. You'll see the NexusOS dashboard — the voice orb in the center shows whether it's listening or idle.
+
+**5. Use it**
+
+Click "Start Listening" in the dashboard, or hit the endpoint directly:
+
+```bash
+curl -X POST http://localhost:8000/api/v1/voice/start
+```
+
+Then talk. Or just use the text command box if you're not set up for audio yet.
+
+---
+
+## Without a microphone
+
+If you just want to explore the system without voice, use the text command API:
+
+```bash
+curl -X POST http://localhost:8000/api/v1/command \
+  -H "Content-Type: application/json" \
+  -d '{"text": "open chrome and go to github.com", "mode": "text"}'
+```
+
+---
+
+## API
+
+The full API reference is in [docs/API.md](docs/API.md). The backend exposes Swagger UI at `http://localhost:8000/docs`.
+
+---
+
+## Architecture
+
+Detailed breakdown of how the voice pipeline, agent system, and memory layer fit together in [docs/architecture.md](docs/architecture.md).
+
+---
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md).
+If you're building on top of this or want to add a new integration, read [CONTRIBUTING.md](CONTRIBUTING.md) first. The plugin system makes it pretty easy to add new capabilities without modifying core code.
+
+---
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT. Use it however you want.
