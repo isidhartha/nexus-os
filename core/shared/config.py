@@ -21,6 +21,11 @@ class Settings(BaseSettings):
     openai_api_key: str = ""
     anthropic_api_key: str = ""
 
+    # Local LLM (Ollama)
+    llm_provider: str = "openai"
+    ollama_base_url: str = "http://localhost:11434"
+    ollama_model: str = "llama3.2"
+
     # Voice
     wake_word: str = "nexus"
     voice_language: str = "en-US"
