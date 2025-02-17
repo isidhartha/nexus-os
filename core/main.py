@@ -45,7 +45,7 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
 
 app = FastAPI(
     title="NexusOS API",
-    description="AI Operating System & Agent Workspace",
+    description="NexusOS — voice-controlled desktop automation and AI assistant",
     version="1.0.0",
     lifespan=lifespan,
 )
