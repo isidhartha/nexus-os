@@ -11,3 +11,4 @@ Running log of changes. Most recent at the bottom.
 [2026-02-21] fix: memory not released on shutdown
 [2026-02-21] workflow error handling
 [2026-02-21] reduced unnecessary work
+[2026-02-22] cleanup and formatting
