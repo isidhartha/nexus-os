@@ -14,3 +14,4 @@ Running log of changes. Most recent at the bottom.
 [2026-02-22] cleanup and formatting
 [2026-02-22] improve readability
 [2026-02-22] quick fix for prod issue
+[2026-02-22] plugin sandboxing
