@@ -24,3 +24,4 @@ Running log of changes. Most recent at the bottom.
 [2026-02-23] chore: rename for clarity
 [2026-02-23] cache invalidation fix
 [2026-02-24] pyautogui coordinate fix
+[2026-02-24] test cleanup
