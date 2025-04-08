@@ -33,3 +33,4 @@ Running log of changes. Most recent at the bottom.
 [2026-02-25] fix: encoding issue in response
 [2026-02-25] fixed config override bug
 [2026-02-26] working on it
+[2026-02-26] fix: race condition in handler
