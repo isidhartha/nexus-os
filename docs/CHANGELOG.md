@@ -57,3 +57,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-05] fixed missing null checks
 [2026-03-05] cleaned up error handling
 [2026-03-05] addressed feedback
+[2026-03-05] got it working
