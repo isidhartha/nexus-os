@@ -66,3 +66,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-07] db index added
 [2026-03-08] smart home MQTT retry
 [2026-03-08] chore: remove debug logs
+[2026-03-09] finally fixed that edge case
