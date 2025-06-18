@@ -74,3 +74,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-11] cleaned up util functions
 [2026-03-11] perf: lazy initialization
 [2026-03-11] fix: off by one
+[2026-03-11] fix: null check was missing
