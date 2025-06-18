@@ -76,3 +76,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-11] fix: off by one
 [2026-03-11] fix: null check was missing
 [2026-03-12] chore: remove dead code
+[2026-03-12] docker build fix
