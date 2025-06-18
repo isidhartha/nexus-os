@@ -78,3 +78,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-12] chore: remove dead code
 [2026-03-12] docker build fix
 [2026-03-12] browser automation waits
+[2026-03-12] small fix
