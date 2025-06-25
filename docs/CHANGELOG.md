@@ -83,3 +83,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-14] removed unused variables
 [2026-03-14] code review fixes
 [2026-03-18] refactor: simplify logic
+[2026-03-18] session context management
