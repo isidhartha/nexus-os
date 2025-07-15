@@ -95,3 +95,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-21] voice response formatting
 [2026-03-21] address review feedback
 [2026-03-21] finishing up
+[2026-03-22] stricter validation
