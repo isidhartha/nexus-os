@@ -100,3 +100,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-22] fixed error propagation
 [2026-03-22] improved test reliability
 [2026-03-23] clearer contributing guide
+[2026-03-23] batch processing improvement
