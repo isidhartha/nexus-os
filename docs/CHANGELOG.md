@@ -105,3 +105,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-23] wake word model update
 [2026-03-23] self review fixes
 [2026-03-24] removed unused dependencies
+[2026-03-24] fixed outdated instructions
