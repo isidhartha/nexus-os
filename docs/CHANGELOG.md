@@ -109,3 +109,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-24] docs: add missing param docs
 [2026-03-24] fixed that null crash
 [2026-03-24] final touches
+[2026-03-24] memory pruning logic
