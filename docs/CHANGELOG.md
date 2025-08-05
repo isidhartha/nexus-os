@@ -113,3 +113,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-24] fix: edge case with empty input
 [2026-03-25] docs: fix typo in readme
 [2026-03-25] mqtt keepalive
+[2026-03-25] fixed edge case in prod
