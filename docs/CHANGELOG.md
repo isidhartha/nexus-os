@@ -118,3 +118,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-26] connection pool sizing
 [2026-03-26] plugin event system
 [2026-03-26] fix: lint errors
+[2026-03-26] tweaks
