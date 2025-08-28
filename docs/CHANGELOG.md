@@ -134,3 +134,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-28] docs: installation steps update
 [2026-03-30] health check endpoint
 [2026-03-30] squash commits
+[2026-03-30] code cleanup
