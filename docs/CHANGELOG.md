@@ -142,3 +142,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-02] added integration test
 [2026-04-02] small improvement
 [2026-04-02] all tests green
+[2026-04-02] removed old commented code
