@@ -162,3 +162,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-06] input bounds check
 [2026-04-06] false positive reduction
 [2026-04-06] post merge cleanup
+[2026-04-06] formatting cleanup
