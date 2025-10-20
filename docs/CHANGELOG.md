@@ -166,3 +166,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-06] better type handling
 [2026-04-07] style: quote consistency
 [2026-04-07] fix: config values not loading
+[2026-04-08] it works now
