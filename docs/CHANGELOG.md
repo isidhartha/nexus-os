@@ -171,3 +171,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-08] cleaned up imports
 [2026-04-08] fixed broken link in readme
 [2026-04-08] startup time improvement
+[2026-04-08] intent classification update
