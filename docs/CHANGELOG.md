@@ -175,3 +175,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-09] chore: remove unused imports
 [2026-04-09] more test coverage
 [2026-04-10] style: formatting
+[2026-04-10] cleanup
