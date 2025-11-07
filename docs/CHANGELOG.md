@@ -186,3 +186,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-12] async fix
 [2026-04-12] first pass
 [2026-04-12] early return pattern
+[2026-04-14] progress
