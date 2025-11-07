@@ -184,3 +184,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-12] session handling
 [2026-04-12] docs: clearer setup instructions
 [2026-04-12] async fix
+[2026-04-12] first pass
