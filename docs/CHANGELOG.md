@@ -194,3 +194,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-15] whisper transcription timeout
 [2026-04-15] refactor: split into smaller functions
 [2026-04-15] faster startup
+[2026-04-15] better getting started guide
