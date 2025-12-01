@@ -200,3 +200,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-17] test fixtures update
 [2026-04-17] docs: better examples
 [2026-04-17] sync with main
+[2026-04-17] resource limits
