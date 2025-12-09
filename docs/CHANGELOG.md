@@ -209,3 +209,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-19] better concurrency
 [2026-04-21] retry logic improved
 [2026-04-21] signal handling
+[2026-04-21] refactor: consolidate error handling
