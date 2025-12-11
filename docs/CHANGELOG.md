@@ -213,3 +213,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-22] named the constants
 [2026-04-22] simplified conditional
 [2026-04-23] version bump
+[2026-04-23] added some tests
