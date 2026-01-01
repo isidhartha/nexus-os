@@ -223,3 +223,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-24] mocked external dependencies
 [2026-04-24] added troubleshooting section
 [2026-04-25] playwright config fix
+[2026-04-25] wake word sensitivity adjustment
