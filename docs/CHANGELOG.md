@@ -221,3 +221,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-24] docs: docker setup clarification
 [2026-04-24] removed dead code
 [2026-04-24] mocked external dependencies
+[2026-04-24] added troubleshooting section
