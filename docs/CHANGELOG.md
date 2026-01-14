@@ -230,3 +230,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-26] packages updated
 [2026-04-28] regression test added
 [2026-04-28] updated changelog
+[2026-04-28] rough draft
