@@ -228,3 +228,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-25] filter improvement
 [2026-04-26] readme cleanup
 [2026-04-26] packages updated
+[2026-04-28] regression test added
