@@ -235,3 +235,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-28] minor refactor
 [2026-04-28] added missing docs
 [2026-04-28] added edge case tests
+[2026-04-30] hotfix: bad default config
