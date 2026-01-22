@@ -237,3 +237,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-28] added edge case tests
 [2026-04-30] hotfix: bad default config
 [2026-04-30] chore: cleanup old scripts
+[2026-04-30] test: better assertions
