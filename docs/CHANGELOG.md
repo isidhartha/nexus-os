@@ -243,3 +243,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-01] computer control accuracy
 [2026-05-01] fix: memory not released on shutdown
 [2026-05-01] workflow error handling
+[2026-05-02] reduced unnecessary work
