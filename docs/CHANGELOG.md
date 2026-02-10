@@ -253,3 +253,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-03] trying a different approach
 [2026-05-04] timeout tuning
 [2026-05-04] consolidate duplicate logic
+[2026-05-04] updated readme
