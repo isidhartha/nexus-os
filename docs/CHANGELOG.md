@@ -256,3 +256,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-04] updated readme
 [2026-05-04] chore: rename for clarity
 [2026-05-05] cache invalidation fix
+[2026-05-05] pyautogui coordinate fix
