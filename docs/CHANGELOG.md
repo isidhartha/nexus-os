@@ -6,3 +6,4 @@ Running log of changes. Most recent at the bottom.
 [2026-02-20] chore: cleanup old scripts
 [2026-02-20] test: better assertions
 [2026-02-21] moved to config
+[2026-02-21] expanded architecture notes
