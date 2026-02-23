@@ -16,3 +16,4 @@ Running log of changes. Most recent at the bottom.
 [2026-02-22] quick fix for prod issue
 [2026-02-22] plugin sandboxing
 [2026-02-22] chore: update license year
+[2026-02-23] chore: gitignore update
