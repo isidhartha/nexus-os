@@ -21,3 +21,4 @@ Running log of changes. Most recent at the bottom.
 [2026-02-23] timeout tuning
 [2026-02-23] consolidate duplicate logic
 [2026-02-23] updated readme
+[2026-02-23] chore: rename for clarity
