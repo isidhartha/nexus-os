@@ -19,3 +19,4 @@ Running log of changes. Most recent at the bottom.
 [2026-02-23] chore: gitignore update
 [2026-02-23] trying a different approach
 [2026-02-23] timeout tuning
+[2026-02-23] consolidate duplicate logic
