@@ -29,3 +29,4 @@ Running log of changes. Most recent at the bottom.
 [2026-02-25] improved api documentation
 [2026-02-25] optimized hot path
 [2026-02-25] fix: connection not closing properly
+[2026-02-25] fixed timeout handling
