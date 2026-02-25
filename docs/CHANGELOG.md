@@ -27,3 +27,4 @@ Running log of changes. Most recent at the bottom.
 [2026-02-24] test cleanup
 [2026-02-25] perf: cache the result
 [2026-02-25] improved api documentation
+[2026-02-25] optimized hot path
