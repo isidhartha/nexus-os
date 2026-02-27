@@ -41,3 +41,4 @@ Running log of changes. Most recent at the bottom.
 [2026-02-27] general cleanup
 [2026-02-27] almost there
 [2026-02-27] fix: bad import path
+[2026-02-27] fixed response format issue
