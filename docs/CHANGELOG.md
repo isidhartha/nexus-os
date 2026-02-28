@@ -265,3 +265,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-06] fixed timeout handling
 [2026-05-06] fix: encoding issue in response
 [2026-05-06] fixed config override bug
+[2026-05-06] working on it
