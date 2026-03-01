@@ -45,3 +45,4 @@ Running log of changes. Most recent at the bottom.
 [2026-02-28] style: consistent indentation
 [2026-02-28] skill registry cleanup
 [2026-03-01] reduce nesting
+[2026-03-01] test: improve mock setup
