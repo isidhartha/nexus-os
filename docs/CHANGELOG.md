@@ -49,3 +49,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-01] dependency cleanup
 [2026-03-02] fixed typo in comment
 [2026-03-02] cleaned up config
+[2026-03-02] documentation cleanup
