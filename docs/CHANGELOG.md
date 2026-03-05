@@ -55,3 +55,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-04] better separation of concerns
 [2026-03-04] test: more edge cases
 [2026-03-05] fixed missing null checks
+[2026-03-05] cleaned up error handling
