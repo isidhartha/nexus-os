@@ -81,3 +81,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-12] small fix
 [2026-03-14] quick improvement
 [2026-03-14] removed unused variables
+[2026-03-14] code review fixes
