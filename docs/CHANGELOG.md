@@ -269,3 +269,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-06] fix: race condition in handler
 [2026-05-06] null safety improvement
 [2026-05-08] audio capture buffer
+[2026-05-08] auth token refresh
