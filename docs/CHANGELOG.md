@@ -87,3 +87,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-18] pagination cursor fix
 [2026-03-18] fix: missing return statement
 [2026-03-20] removed debug prints
+[2026-03-20] linting fixes
