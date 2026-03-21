@@ -92,3 +92,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-20] voice pipeline latency fix
 [2026-03-21] guard clause cleanup
 [2026-03-21] fix: wrong variable used
+[2026-03-21] voice response formatting
