@@ -98,3 +98,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-22] stricter validation
 [2026-03-22] minor tweaks
 [2026-03-22] fixed error propagation
+[2026-03-22] improved test reliability
