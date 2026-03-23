@@ -102,3 +102,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-23] clearer contributing guide
 [2026-03-23] batch processing improvement
 [2026-03-23] docs: update readme
+[2026-03-23] wake word model update
