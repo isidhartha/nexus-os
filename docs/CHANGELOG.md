@@ -103,3 +103,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-23] batch processing improvement
 [2026-03-23] docs: update readme
 [2026-03-23] wake word model update
+[2026-03-23] self review fixes
