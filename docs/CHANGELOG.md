@@ -115,3 +115,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-25] mqtt keepalive
 [2026-03-25] fixed edge case in prod
 [2026-03-25] chore: bump package versions
+[2026-03-26] connection pool sizing
