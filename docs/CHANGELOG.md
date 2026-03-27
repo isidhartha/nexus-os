@@ -123,3 +123,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-27] query optimization
 [2026-03-27] minor cleanup
 [2026-03-27] better variable names
+[2026-03-27] plugin hot reload logic
