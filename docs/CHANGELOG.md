@@ -129,3 +129,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-28] cors fix
 [2026-03-28] fix: incorrect default value
 [2026-03-28] api docs update
+[2026-03-28] fix: response shape mismatch
