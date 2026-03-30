@@ -137,3 +137,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-30] code cleanup
 [2026-03-30] fix: environment variable parsing
 [2026-03-30] dashboard real-time updates
+[2026-03-30] hotfix: null dereference
