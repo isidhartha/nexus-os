@@ -279,3 +279,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-12] skill registry cleanup
 [2026-05-12] reduce nesting
 [2026-05-12] test: improve mock setup
+[2026-05-13] dependency cleanup
