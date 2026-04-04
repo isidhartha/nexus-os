@@ -152,3 +152,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-04] clearer docs
 [2026-04-04] voice recognition edge cases
 [2026-04-04] better memory usage
+[2026-04-04] alternative approach
