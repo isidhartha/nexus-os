@@ -154,3 +154,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-04] better memory usage
 [2026-04-04] alternative approach
 [2026-04-05] fix: log level override not working
+[2026-04-05] docs: update changelog
