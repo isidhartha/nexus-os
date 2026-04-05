@@ -158,3 +158,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-05] header cleanup
 [2026-04-05] tests passing now
 [2026-04-05] back to simpler approach
+[2026-04-05] removed magic numbers
