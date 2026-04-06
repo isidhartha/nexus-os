@@ -283,3 +283,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-13] fixed typo in comment
 [2026-05-13] cleaned up config
 [2026-05-13] documentation cleanup
+[2026-05-13] consistent naming
