@@ -164,3 +164,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-06] post merge cleanup
 [2026-04-06] formatting cleanup
 [2026-04-06] better type handling
+[2026-04-07] style: quote consistency
