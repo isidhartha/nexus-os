@@ -169,3 +169,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-08] it works now
 [2026-04-08] file management safety checks
 [2026-04-08] cleaned up imports
+[2026-04-08] fixed broken link in readme
