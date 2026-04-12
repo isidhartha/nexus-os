@@ -291,3 +291,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-14] cleaned up error handling
 [2026-05-14] addressed feedback
 [2026-05-14] got it working
+[2026-05-14] whitespace fix
