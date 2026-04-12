@@ -182,3 +182,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-11] fix: broken unit test
 [2026-04-11] tts queue handling
 [2026-04-12] session handling
+[2026-04-12] docs: clearer setup instructions
