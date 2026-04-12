@@ -185,3 +185,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-12] docs: clearer setup instructions
 [2026-04-12] async fix
 [2026-04-12] first pass
+[2026-04-12] early return pattern
