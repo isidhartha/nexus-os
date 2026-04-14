@@ -294,3 +294,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-14] whitespace fix
 [2026-05-15] refactor: cleaner variable names
 [2026-05-15] merge fixes
+[2026-05-15] cleaned up after merge
