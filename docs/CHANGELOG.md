@@ -198,3 +198,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-17] this should do it
 [2026-04-17] output sanitization
 [2026-04-17] test fixtures update
+[2026-04-17] docs: better examples
