@@ -207,3 +207,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-19] refactor: extract constants
 [2026-04-19] sensible defaults
 [2026-04-19] better concurrency
+[2026-04-21] retry logic improved
