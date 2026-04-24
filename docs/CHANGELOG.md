@@ -217,3 +217,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-23] automation scheduling
 [2026-04-24] fixed failing test
 [2026-04-24] chore: standardize naming
+[2026-04-24] fixed pagination edge case
