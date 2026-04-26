@@ -226,3 +226,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-25] wake word sensitivity adjustment
 [2026-04-25] test: add basic unit tests
 [2026-04-25] filter improvement
+[2026-04-26] readme cleanup
