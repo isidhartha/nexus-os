@@ -304,3 +304,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-16] graceful shutdown
 [2026-05-16] fixed wrong import path
 [2026-05-16] command history persistence
+[2026-05-16] cleaned up util functions
