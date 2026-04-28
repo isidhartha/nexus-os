@@ -306,3 +306,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-16] command history persistence
 [2026-05-16] cleaned up util functions
 [2026-05-17] perf: lazy initialization
+[2026-05-17] fix: off by one
