@@ -233,3 +233,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-28] rough draft
 [2026-04-28] reverted bad change
 [2026-04-28] minor refactor
+[2026-04-28] added missing docs
