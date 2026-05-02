@@ -245,3 +245,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-01] workflow error handling
 [2026-05-02] reduced unnecessary work
 [2026-05-02] cleanup and formatting
+[2026-05-02] improve readability
