@@ -247,3 +247,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-02] cleanup and formatting
 [2026-05-02] improve readability
 [2026-05-03] quick fix for prod issue
+[2026-05-03] plugin sandboxing
