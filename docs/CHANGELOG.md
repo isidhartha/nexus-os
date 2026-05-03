@@ -250,3 +250,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-03] plugin sandboxing
 [2026-05-03] chore: update license year
 [2026-05-03] chore: gitignore update
+[2026-05-03] trying a different approach
