@@ -261,3 +261,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-05] perf: cache the result
 [2026-05-05] improved api documentation
 [2026-05-05] optimized hot path
+[2026-05-05] fix: connection not closing properly
