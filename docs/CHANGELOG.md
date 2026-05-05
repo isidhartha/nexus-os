@@ -259,3 +259,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-05] pyautogui coordinate fix
 [2026-05-05] test cleanup
 [2026-05-05] perf: cache the result
+[2026-05-05] improved api documentation
