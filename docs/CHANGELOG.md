@@ -267,3 +267,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-06] fixed config override bug
 [2026-05-06] working on it
 [2026-05-06] fix: race condition in handler
+[2026-05-06] null safety improvement
