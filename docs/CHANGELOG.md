@@ -272,3 +272,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-08] auth token refresh
 [2026-05-09] search ranking tweak
 [2026-05-09] general cleanup
+[2026-05-09] almost there
