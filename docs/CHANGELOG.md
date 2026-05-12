@@ -277,3 +277,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-10] fixed response format issue
 [2026-05-10] style: consistent indentation
 [2026-05-12] skill registry cleanup
+[2026-05-12] reduce nesting
