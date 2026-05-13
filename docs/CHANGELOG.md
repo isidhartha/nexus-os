@@ -281,3 +281,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-12] test: improve mock setup
 [2026-05-13] dependency cleanup
 [2026-05-13] fixed typo in comment
+[2026-05-13] cleaned up config
