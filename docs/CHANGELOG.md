@@ -286,3 +286,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-13] consistent naming
 [2026-05-13] fixed the broken test
 [2026-05-14] better separation of concerns
+[2026-05-14] test: more edge cases
