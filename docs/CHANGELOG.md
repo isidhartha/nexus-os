@@ -289,3 +289,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-14] test: more edge cases
 [2026-05-14] fixed missing null checks
 [2026-05-14] cleaned up error handling
+[2026-05-14] addressed feedback
