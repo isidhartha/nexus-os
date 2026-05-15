@@ -297,3 +297,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-15] cleaned up after merge
 [2026-05-15] perf: avoid redundant computation
 [2026-05-15] db index added
+[2026-05-15] smart home MQTT retry
