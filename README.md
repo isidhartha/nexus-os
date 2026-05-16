@@ -2,6 +2,17 @@
 
 [![Discussions](https://img.shields.io/github/discussions/isidhartha/nexus-os)](https://github.com/isidhartha/nexus-os/discussions)
 
+## Demo
+
+![Demo](docs/images/demo.gif)
+
+### Screenshots
+
+| Desktop | Feature View | Mobile |
+|---------|-------------|--------|
+| ![Desktop](docs/images/screenshot_desktop.png) | ![Feature](docs/images/screenshot_feature.png) | ![Mobile](docs/images/screenshot_mobile.png) |
+
+
 I built NexusOS because I wanted a Jarvis — not a toy demo, but something that actually controls my computer, understands what I'm asking, and takes action. This is that project.
 
 It's an AI operating environment that runs locally. You say "Hey Nexus", it wakes up, listens, figures out what you want, and does it. Open Chrome, search for something, move files around, run a script, control your smart home devices — all through voice or text, without touching the keyboard.
