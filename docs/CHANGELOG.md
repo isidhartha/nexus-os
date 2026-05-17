@@ -308,3 +308,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-17] perf: lazy initialization
 [2026-05-17] fix: off by one
 [2026-05-17] fix: null check was missing
+[2026-05-17] chore: remove dead code
