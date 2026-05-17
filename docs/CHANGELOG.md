@@ -310,3 +310,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-17] fix: null check was missing
 [2026-05-17] chore: remove dead code
 [2026-05-17] docker build fix
+[2026-05-17] browser automation waits
