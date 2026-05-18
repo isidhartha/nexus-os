@@ -317,3 +317,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-18] code review fixes
 [2026-05-18] refactor: simplify logic
 [2026-05-18] session context management
+[2026-05-18] pagination cursor fix
