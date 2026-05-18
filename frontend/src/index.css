@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-nexus-bg text-nexus-text font-mono;
+    background-image:
+      radial-gradient(ellipse at 20% 50%, #00d4ff08 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 20%, #0084ff06 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 80%, #7b2fff06 0%, transparent 50%);
+  }
+}
+
+@layer components {
+  .nexus-panel {
+    @apply bg-nexus-panel border border-nexus-border rounded-xl backdrop-blur-sm;
+    box-shadow: 0 0 30px rgba(0, 132, 255, 0.05), inset 0 0 30px rgba(0, 212, 255, 0.02);
+  }
+
+  .nexus-button {
+    @apply px-4 py-2 rounded-lg border border-nexus-border text-nexus-cyan
+           hover:bg-nexus-glow hover:border-nexus-cyan transition-all duration-200
+           font-display text-xs tracking-widest uppercase;
+  }
+
+  .nexus-input {
+    @apply w-full bg-nexus-bg border border-nexus-border rounded-lg px-4 py-2
+           text-nexus-text font-mono text-sm placeholder-nexus-dim
+           focus:outline-none focus:border-nexus-cyan focus:ring-1 focus:ring-nexus-cyan/30
+           transition-all duration-200;
+  }
+
+  .glow-text {
+    text-shadow: 0 0 20px currentColor;
+  }
+
+  .scan-overlay {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .scan-overlay::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #00d4ff40, transparent);
+    animation: scan_line 4s linear infinite;
+  }
+}

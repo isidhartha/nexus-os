@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NexusOS — AI Operating System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="nexus-bg text-white font-sans overflow-x-hidden">
+
+  <!-- Background canvas -->
+  <canvas id="bgCanvas" class="fixed inset-0 pointer-events-none z-0"></canvas>
+
+  <!-- Top bar -->
+  <header class="fixed top-0 left-0 right-0 z-30 flex items-center justify-between px-6 py-3 nexus-topbar">
+    <div class="flex items-center gap-4">
+      <span class="font-orbitron text-xl font-bold text-blue-400 tracking-widest">NEXUS<span class="text-white">OS</span></span>
+      <div class="hidden md:flex items-center gap-2 text-xs text-blue-400/60 font-mono">
+        <span id="sysTime" class="text-blue-300">00:00:00</span>
+        <span>·</span>
+        <span id="sysDate" class="text-blue-400/50">--/--/----</span>
+      </div>
+    </div>
+    <div class="flex items-center gap-3">
+      <div class="sys-badge">
+        <i class="fas fa-microchip text-blue-400 text-xs"></i>
+        <span class="text-xs font-mono text-blue-300">CPU <span id="cpuVal">--</span>%</span>
+      </div>
+      <div class="sys-badge">
+        <i class="fas fa-memory text-yellow-400 text-xs"></i>
+        <span class="text-xs font-mono text-yellow-300">MEM <span id="memVal">--</span>%</span>
+      </div>
+      <div id="nexusBadge" class="sys-badge text-xs font-mono text-red-400">● OFFLINE</div>
+    </div>
+  </header>
+
+  <!-- Main layout -->
+  <div class="pt-16 min-h-screen flex flex-col items-center relative z-10">
+
+    <!-- HERO BANNER -->
+    <div id="heroBanner" class="w-full max-w-4xl mx-auto px-4 pt-6 pb-2">
+      <div class="nexus-panel rounded-2xl px-5 py-4 relative" style="border-color:rgba(0,180,255,0.2)">
+        <div class="flex items-start justify-between gap-4">
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-3 mb-1.5">
+              <span class="font-orbitron text-sm font-bold" style="color:#00b4ff">NEXUS OS</span>
+              <span class="text-xs px-2 py-0.5 rounded font-mono" style="background:rgba(0,180,255,0.1);color:rgba(0,180,255,0.7)">AI Operating System</span>
+            </div>
+            <p class="text-xs leading-relaxed" style="color:rgba(255,255,255,0.5)">Your Jarvis-style AI assistant that controls your entire digital environment. Issue voice or text commands to launch apps, automate workflows, control smart-home devices, search memory, and run sandboxed tasks — all from one unified interface powered by real-time AI.</p>
+            <div class="flex flex-wrap gap-1.5 mt-2.5">
+              <span class="text-xs px-2 py-0.5 rounded-full" style="background:rgba(0,180,255,0.08);color:rgba(0,180,255,0.7)">🎙️ Voice &amp; Text Commands</span>
+              <span class="text-xs px-2 py-0.5 rounded-full" style="background:rgba(255,215,0,0.08);color:rgba(255,215,0,0.7)">🏠 Smart Home Control</span>
+              <span class="text-xs px-2 py-0.5 rounded-full" style="background:rgba(0,255,136,0.08);color:rgba(0,255,136,0.6)">⚙️ Workflow Automation · Memory · Security</span>
+            </div>
+          </div>
+          <button onclick="document.getElementById('heroBanner').style.display='none'" class="flex-shrink-0 text-lg leading-none mt-0.5" style="color:rgba(0,180,255,0.3)" title="Dismiss">×</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ORB SECTION -->
+    <section class="relative flex flex-col items-center justify-center py-10 w-full">
+      <div class="orb-container relative" id="orbContainer">
+        <!-- Rings -->
+        <div class="orb-ring ring-1"></div>
+        <div class="orb-ring ring-2"></div>
+        <div class="orb-ring ring-3"></div>
+        <div class="orb-ring ring-4"></div>
+        <!-- Core -->
+        <div class="orb-core flex flex-col items-center justify-center" id="orbCore">
+          <button id="voiceBtn" onclick="toggleVoice()" class="voice-btn flex flex-col items-center gap-2">
+            <i id="voiceIcon" class="fas fa-microphone text-3xl"></i>
+            <span id="voiceLabel" class="text-xs font-mono tracking-wider text-blue-300">TAP TO SPEAK</span>
+          </button>
+        </div>
+        <!-- Status ring text -->
+        <div class="orb-status-text absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-8 font-orbitron text-xs tracking-widest text-blue-400/60" id="orbStatus">STANDBY</div>
+      </div>
+
+      <!-- Command input -->
+      <div class="mt-16 w-full max-w-2xl px-4">
+        <div class="nexus-input-wrap flex items-center gap-3">
+          <span class="text-blue-400 font-mono text-sm">›</span>
+          <input id="commandInput" type="text" placeholder="Enter command or ask Nexus anything…"
+            class="nexus-input flex-1 bg-transparent text-white placeholder-blue-400/40 font-mono text-sm focus:outline-none py-3"
+            onkeydown="handleCommandKey(event)" />
+          <button onclick="sendCommand()" class="nexus-send-btn px-4 py-2 text-xs font-orbitron">SEND</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Command history + Response -->
+    <div class="w-full max-w-6xl px-4 grid md:grid-cols-2 gap-4 mb-6">
+      <!-- Command history -->
+      <div class="nexus-panel rounded-xl p-4">
+        <div class="flex items-center gap-2 mb-3 pb-2 border-b border-blue-500/10">
+          <i class="fas fa-history text-blue-400 text-xs"></i>
+          <span class="font-orbitron text-xs text-blue-400 tracking-widest">COMMAND HISTORY</span>
+        </div>
+        <div id="commandHistory" class="space-y-2 max-h-48 overflow-y-auto">
+          <div class="text-xs text-blue-400/30 font-mono italic">No commands yet…</div>
+        </div>
+      </div>
+      <!-- Last response -->
+      <div class="nexus-panel rounded-xl p-4">
+        <div class="flex items-center gap-2 mb-3 pb-2 border-b border-blue-500/10">
+          <i class="fas fa-robot text-blue-400 text-xs"></i>
+          <span class="font-orbitron text-xs text-blue-400 tracking-widest">NEXUS RESPONSE</span>
+        </div>
+        <div id="lastResponse" class="text-sm text-blue-200/70 font-mono italic">Awaiting command…</div>
+      </div>
+    </div>
+
+    <!-- Bottom panels grid -->
+    <div class="w-full max-w-6xl px-4 grid md:grid-cols-3 gap-4 pb-8">
+
+      <!-- Smart Home -->
+      <div class="nexus-panel rounded-xl p-4">
+        <div class="flex items-center gap-2 mb-3 pb-2 border-b border-blue-500/10">
+          <i class="fas fa-home text-yellow-400 text-xs"></i>
+          <span class="font-orbitron text-xs text-yellow-400 tracking-widest">SMART HOME</span>
+          <button onclick="loadDevices()" class="ml-auto text-blue-400/40 hover:text-blue-400 text-xs"><i class="fas fa-rotate-right"></i></button>
+        </div>
+        <div id="deviceGrid" class="space-y-2"></div>
+      </div>
+
+      <!-- Memory -->
+      <div class="nexus-panel rounded-xl p-4">
+        <div class="flex items-center gap-2 mb-3 pb-2 border-b border-blue-500/10">
+          <i class="fas fa-brain text-purple-400 text-xs"></i>
+          <span class="font-orbitron text-xs text-purple-400 tracking-widest">MEMORY</span>
+        </div>
+        <div id="memoryList" class="space-y-2 text-xs font-mono">
+          <div class="text-blue-400/30 italic">Loading memories…</div>
+        </div>
+        <div class="mt-3 flex gap-2">
+          <input id="memInput" type="text" placeholder="Save a memory…" class="nexus-input-sm flex-1 text-xs" />
+          <button onclick="saveMemory()" class="text-xs px-2 py-1 rounded bg-purple-500/20 text-purple-300 hover:bg-purple-500/30">Save</button>
+        </div>
+      </div>
+
+      <!-- Security -->
+      <div class="nexus-panel rounded-xl p-4">
+        <div class="flex items-center gap-2 mb-3 pb-2 border-b border-blue-500/10">
+          <i class="fas fa-shield-halved text-red-400 text-xs"></i>
+          <span class="font-orbitron text-xs text-red-400 tracking-widest">SECURITY</span>
+        </div>
+        <div id="securityEvents" class="space-y-2 text-xs font-mono">
+          <div class="text-blue-400/30 italic">Loading events…</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Workflows row -->
+    <div class="w-full max-w-6xl px-4 mb-8">
+      <div class="nexus-panel rounded-xl p-4">
+        <div class="flex items-center gap-2 mb-3 pb-2 border-b border-blue-500/10">
+          <i class="fas fa-diagram-project text-green-400 text-xs"></i>
+          <span class="font-orbitron text-xs text-green-400 tracking-widest">WORKFLOWS</span>
+          <button onclick="loadWorkflows()" class="ml-auto text-blue-400/40 hover:text-blue-400 text-xs"><i class="fas fa-rotate-right"></i></button>
+        </div>
+        <div id="workflowList" class="flex flex-wrap gap-2"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toastContainer" class="fixed bottom-5 right-5 z-50 space-y-2"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
