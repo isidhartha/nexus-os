@@ -1,0 +1,28 @@
+{
+  "name": "@isidhartha/nexus-client",
+  "version": "1.0.0",
+  "description": "Node.js client for the NexusOS AI API — send commands, listen to events, and integrate NexusOS into your own applications",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/isidhartha/nexus-os.git"
+  },
+  "homepage": "https://github.com/isidhartha/nexus-os#readme",
+  "bugs": {
+    "url": "https://github.com/isidhartha/nexus-os/issues"
+  },
+  "keywords": [
+    "nexusos",
+    "voice-assistant",
+    "ai",
+    "automation",
+    "smart-home",
+    "computer-control"
+  ],
+  "author": "Sidhartha <ramsiddhartha71154@gmail.com>",
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
+}
