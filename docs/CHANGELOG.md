@@ -318,3 +318,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-18] refactor: simplify logic
 [2026-05-18] session context management
 [2026-05-18] pagination cursor fix
+[2026-05-19] fix: missing return statement
