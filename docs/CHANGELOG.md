@@ -234,90 +234,90 @@ Running log of changes. Most recent at the bottom.
 [2026-04-28] reverted bad change
 [2026-04-28] minor refactor
 [2026-04-28] added missing docs
-[2026-04-28] added edge case tests
-[2026-04-30] hotfix: bad default config
-[2026-04-30] chore: cleanup old scripts
-[2026-04-30] test: better assertions
-[2026-04-30] moved to config
-[2026-05-01] expanded architecture notes
-[2026-05-01] computer control accuracy
-[2026-05-01] fix: memory not released on shutdown
-[2026-05-01] workflow error handling
-[2026-05-02] reduced unnecessary work
-[2026-05-02] cleanup and formatting
-[2026-05-02] improve readability
-[2026-05-03] quick fix for prod issue
-[2026-05-03] plugin sandboxing
-[2026-05-03] chore: update license year
-[2026-05-03] chore: gitignore update
-[2026-05-03] trying a different approach
-[2026-05-04] timeout tuning
-[2026-05-04] consolidate duplicate logic
-[2026-05-04] updated readme
-[2026-05-04] chore: rename for clarity
-[2026-05-05] cache invalidation fix
-[2026-05-05] pyautogui coordinate fix
-[2026-05-05] test cleanup
-[2026-05-05] perf: cache the result
-[2026-05-05] improved api documentation
-[2026-05-05] optimized hot path
-[2026-05-05] fix: connection not closing properly
-[2026-05-06] fixed timeout handling
-[2026-05-06] fix: encoding issue in response
-[2026-05-06] fixed config override bug
-[2026-05-06] working on it
-[2026-05-06] fix: race condition in handler
-[2026-05-06] null safety improvement
-[2026-05-08] audio capture buffer
-[2026-05-08] auth token refresh
-[2026-05-09] search ranking tweak
-[2026-05-09] general cleanup
-[2026-05-09] almost there
-[2026-05-09] fix: bad import path
-[2026-05-10] fixed response format issue
-[2026-05-10] style: consistent indentation
-[2026-05-12] skill registry cleanup
-[2026-05-12] reduce nesting
-[2026-05-12] test: improve mock setup
-[2026-05-13] dependency cleanup
-[2026-05-13] fixed typo in comment
-[2026-05-13] cleaned up config
-[2026-05-13] documentation cleanup
-[2026-05-13] consistent naming
-[2026-05-13] fixed the broken test
-[2026-05-14] better separation of concerns
-[2026-05-14] test: more edge cases
-[2026-05-14] fixed missing null checks
-[2026-05-14] cleaned up error handling
-[2026-05-14] addressed feedback
-[2026-05-14] got it working
-[2026-05-14] whitespace fix
-[2026-05-15] refactor: cleaner variable names
-[2026-05-15] merge fixes
-[2026-05-15] cleaned up after merge
-[2026-05-15] perf: avoid redundant computation
-[2026-05-15] db index added
-[2026-05-15] smart home MQTT retry
-[2026-05-15] chore: remove debug logs
-[2026-05-16] finally fixed that edge case
-[2026-05-16] renamed for clarity
-[2026-05-16] graceful shutdown
-[2026-05-16] fixed wrong import path
-[2026-05-16] command history persistence
-[2026-05-16] cleaned up util functions
-[2026-05-17] perf: lazy initialization
-[2026-05-17] fix: off by one
-[2026-05-17] fix: null check was missing
-[2026-05-17] chore: remove dead code
-[2026-05-17] docker build fix
-[2026-05-17] browser automation waits
-[2026-05-17] small fix
-[2026-05-18] quick improvement
-[2026-05-18] removed unused variables
-[2026-05-18] code review fixes
-[2026-05-18] refactor: simplify logic
-[2026-05-18] session context management
-[2026-05-18] pagination cursor fix
-[2026-05-19] fix: missing return statement
-[2026-05-19] removed debug prints
-[2026-05-19] linting fixes
+[2026-04-28] test edge cases
+[2026-04-30] one more thing
+[2026-04-30] clean up old tooling
+[2026-04-30] improve test checks
+[2026-04-30] make configurable
+[2026-05-01] update arch docs
+[2026-05-01] missed this
+[2026-05-01] fix: cleanup on shutdown
+[2026-05-01] polish
+[2026-05-02] follow-up
+[2026-05-02] tidy after review
+[2026-05-02] polish
+[2026-05-03] urgent prod fix
+[2026-05-03] minor update
+[2026-05-03] license header update
+[2026-05-03] add to .gitignore
+[2026-05-03] new approach
+[2026-05-04] tweak
+[2026-05-04] catch-up
+[2026-05-04] update readme
+[2026-05-04] better names everywhere
+[2026-05-05] fix cache invalidation
+[2026-05-05] housekeeping
+[2026-05-05] small win
+[2026-05-05] cache the computed value
+[2026-05-05] one more thing
+[2026-05-05] missed this
+[2026-05-05] fix: close connection
+[2026-05-06] catch-up
+[2026-05-06] fix: response encoding
+[2026-05-06] minor update
+[2026-05-06] in progress, not done
+[2026-05-06] fix: concurrent access
+[2026-05-06] tidy
+[2026-05-08] one more thing
+[2026-05-08] handle token expiry
+[2026-05-09] ranking adjustment
+[2026-05-09] housekeeping pass
+[2026-05-09] one more fix
+[2026-05-09] fix: import typo
+[2026-05-10] another fix
+[2026-05-10] normalize indentation
+[2026-05-12] tweak
+[2026-05-12] reduce code depth
+[2026-05-12] improve mocking
+[2026-05-13] clean up deps
+[2026-05-13] catch-up
+[2026-05-13] config cleanup
+[2026-05-13] quick pass
+[2026-05-13] uniform naming
+[2026-05-13] tweak
+[2026-05-14] separate responsibilities
+[2026-05-14] add edge case tests
+[2026-05-14] small win
+[2026-05-14] error handling cleanup
+[2026-05-14] review feedback applied
+[2026-05-14] that finally worked
+[2026-05-14] tweak
+[2026-05-15] better variable names
+[2026-05-15] fix merge issues
+[2026-05-15] tidy post-merge
+[2026-05-15] avoid re-computation
+[2026-05-15] index for hot query
+[2026-05-15] small win
+[2026-05-15] remove leftover logs
+[2026-05-16] another fix
+[2026-05-16] rename for readability
+[2026-05-16] clean shutdown
+[2026-05-16] forgot this
+[2026-05-16] housekeeping
+[2026-05-16] utility cleanup
+[2026-05-17] lazy load
+[2026-05-17] fix: index arithmetic
+[2026-05-17] fix: null dereference
+[2026-05-17] remove stale code
+[2026-05-17] fix docker build
+[2026-05-17] tidy
+[2026-05-17] tiny fix
+[2026-05-18] small win
+[2026-05-18] remove dead vars
+[2026-05-18] polish
+[2026-05-18] straighten out code
+[2026-05-18] small win
+[2026-05-18] fix pagination logic
+[2026-05-19] fix: add missing return
+[2026-05-19] clean up logging
+[2026-05-19] linting cleanup
