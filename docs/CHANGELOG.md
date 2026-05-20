@@ -321,3 +321,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-19] fix: missing return statement
 [2026-05-19] removed debug prints
 [2026-05-19] linting fixes
+[2026-05-20] docs: add MTU enforcement notes to networking guide
