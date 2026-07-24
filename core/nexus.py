@@ -200,14 +200,19 @@ class NexusOS:
         return await self._ai_respond(text, context)
 
     async def _ai_respond(self, text: str, context: str) -> str:
-        """Use AI API to respond to unrecognized commands."""
-        if llm_service.LLM_PROVIDER == "ollama":
-            return await self._ollama_respond(text, context)
-        if self._settings.openai_api_key:
-            return await self._openai_respond(text, context)
-        if self._settings.anthropic_api_key:
-            return await self._anthropic_respond(text, context)
-        return f"[NexusOS] I received: '{text}'. Configure OPENAI_API_KEY, ANTHROPIC_API_KEY, or set LLM_PROVIDER=ollama for AI responses."
+        """Use AI API to respond to unrecognized commands via llm_service router."""
+        try:
+            loop = asyncio.get_event_loop()
+            system_prompt = (
+                "You are NexusOS, an AI operating system assistant. "
+                "Be concise, helpful, and action-oriented."
+            ) + (f"\n{context}" if context else "")
+            return await loop.run_in_executor(
+                None, lambda: llm_service.complete(text, system=system_prompt)
+            )
+        except Exception as exc:
+            logger.error("AI error: %s", exc)
+            return f"AI error: {exc}"
 
     async def _ollama_respond(self, text: str, context: str) -> str:
         """Use local Ollama instance to respond."""
