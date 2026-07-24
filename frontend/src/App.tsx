@@ -6,7 +6,8 @@ import Workflows from './pages/Workflows';
 import Settings from './pages/Settings';
 import { useNexusStore } from './store';
 
-const WS_URL = 'ws://localhost:8000/ws/nexus';
+const wsProto = window.location.protocol === 'https:' ? 'wss' : 'ws';
+const WS_URL = `${wsProto}://${window.location.host}/ws/nexus`;
 
 export default function App(): React.ReactElement {
   const wsRef = useRef<WebSocket | null>(null);
