@@ -51,49 +51,70 @@ Everything runs in Docker, so you don't have to install audio libraries on your 
 
 ## How to run it
 
-You'll need Docker and Docker Compose installed. That's the only real prerequisite.
+### Prerequisites
+- Python 3.10+
+- Node.js 18+
+- Git
+- Redis (`redis-server`)
+- PostgreSQL 13+ with database `nexusdb` created
+- Ollama (optional, for running without any API key — https://ollama.com)
+- Mosquitto MQTT broker (optional, for smart home features — https://mosquitto.org)
 
-**1. Clone the repo**
+### Setup
 
 ```bash
-git clone https://github.com/isidhartha/nexus-os.git
+# 1. Clone and enter the project
+git clone https://github.com/isidhartha/nexus-os
 cd nexus-os
-```
 
-**2. Set up your environment**
+# 2. Create virtual environment
+# Windows:
+python -m venv venv
+venv\Scripts\activate
+# Mac/Linux:
+python3 -m venv venv
+source venv/bin/activate
 
-```bash
+# 3. Install Python dependencies
+pip install -r core/requirements.txt
+
+# 4. Install Playwright browsers (for browser automation)
+playwright install chromium
+
+# 5. Configure environment
+# Windows:
+copy .env.example .env
+# Mac/Linux:
 cp .env.example .env
+# Open .env and fill in at least one AI provider key
+# OR set AI_PROVIDER=ollama to run without any API key
+
+# 6. Start services
+# Redis (in a terminal):
+redis-server
+# PostgreSQL must be running — create the database once:
+# psql -U postgres -c "CREATE DATABASE nexusdb;"
+# MQTT (optional — skip if not using smart home):
+# Windows: mosquitto  |  Mac: brew services start mosquitto  |  Linux: sudo systemctl start mosquitto
+
+# 7. Run the backend
+uvicorn core.main:app --reload --port 8002
+
+# 8. Run the frontend (in a new terminal, from project root)
+cd frontend
+npm install
+npm run dev -- --port 3002
 ```
 
-Open `.env` and add your OpenAI API key. Everything else can stay as the default values to start.
+**Dashboard**: http://localhost:3002  
+**API docs**: http://localhost:8002/docs  
 
-```
-OPENAI_API_KEY=sk-your-key-here
-WAKE_WORD=nexus
-```
-
-**3. Start everything**
-
+To use without a microphone, send text commands directly:
 ```bash
-docker-compose up --build
+curl -X POST http://localhost:8002/api/v1/command \
+  -H "Content-Type: application/json" \
+  -d '{"text": "open chrome and go to github.com", "mode": "text"}'
 ```
-
-This builds the backend, starts Postgres, Redis, and the MQTT broker, and serves the frontend. First build takes a few minutes because it installs the Playwright browser.
-
-**4. Open the dashboard**
-
-Go to `http://localhost:3000`. You'll see the NexusOS dashboard — the voice orb in the center shows whether it's listening or idle.
-
-**5. Use it**
-
-Click "Start Listening" in the dashboard, or hit the endpoint directly:
-
-```bash
-curl -X POST http://localhost:8000/api/v1/voice/start
-```
-
-Then talk. Or just use the text command box if you're not set up for audio yet.
 
 ---
 

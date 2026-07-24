@@ -43,7 +43,7 @@ class Settings(BaseSettings):
     mqtt_port: int = 1883
 
     # Server
-    cors_origins: str = "http://localhost:3000,http://localhost:5173"
+    cors_origins: str = "http://localhost:3002,http://localhost:5173"
     log_level: str = "INFO"
     secret_key: str = "change-me-in-production"
 

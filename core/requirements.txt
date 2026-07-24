@@ -9,6 +9,7 @@ openai-whisper>=20231117
 pyttsx3>=2.90
 pyautogui>=0.9.54
 playwright>=1.44.0
+requests>=2.31.0
 python-dotenv>=1.0.1
 paho-mqtt>=2.0.0
 sqlalchemy>=2.0.30
